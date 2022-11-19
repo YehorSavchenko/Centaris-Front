@@ -19,14 +19,22 @@ public class TrafficService {
         this.webClient = webClient;
     }
 
-    public void sendRequest() {
+    public Object sendRequest(String uri, Object request, Class<?> response) {
         LOGGER.info("Sending request to {}", proxyUrl);
-        TestResponse testResponse = webClient.method(HttpMethod.GET)
-                .uri(proxyUrl + "/data/")
-                .bodyValue(new TestRequest("Loc"))
+        return webClient.method(HttpMethod.GET)
+                .uri(proxyUrl + uri)
+                .bodyValue(request)
                 .retrieve()
-                .bodyToMono(TestResponse.class)
+                .bodyToMono(response)
                 .block();
-        LOGGER.info("Received {}", testResponse);
+    }
+
+    public Object sendEmptyRequest(String uri, Class<?> response) {
+        LOGGER.info("Sending request to {}", proxyUrl);
+        return webClient.method(HttpMethod.GET)
+                .uri(proxyUrl + uri)
+                .retrieve()
+                .bodyToMono(response)
+                .block();
     }
 }
