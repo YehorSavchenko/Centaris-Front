@@ -19,28 +19,28 @@ public class ItemsService {
     }
 
     public void sendGetAllItemsRequest() {
-        LOGGER.info("Sending request to {}", proxyUrl);
+        LOGGER.info("Sending GetAllItemsRequest to {}", proxyUrl);
         ItemList itemListResponse = (ItemList) trafficService
                 .sendEmptyRequest("/items/get/all", ItemList.class);
         LOGGER.info("Received {}", itemListResponse);
     }
 
     public void sendGetDistrictItemsRequest(String district) {
-        LOGGER.info("Sending request to {}", proxyUrl);
+        LOGGER.info("Sending GetDistrictItemsRequest to {}", proxyUrl);
         ItemList itemListResponse = (ItemList) trafficService
                 .sendEmptyRequest("/items/get/district/" + district, ItemList.class);
         LOGGER.info("Received {}", itemListResponse);
     }
 
     public void sendGetCategoryItemsRequest(String category) {
-        LOGGER.info("Sending request to {}", proxyUrl);
+        LOGGER.info("Sending GetCategoryItemsRequest to {}", proxyUrl);
         ItemList itemListResponse = (ItemList) trafficService
                 .sendEmptyRequest("/items/get/category/" + category, ItemList.class);
         LOGGER.info("Received {}", itemListResponse);
     }
 
     public void sendGetCategoryAndDistrictItemsRequest(String category, String district) {
-        LOGGER.info("Sending request to {}", proxyUrl);
+        LOGGER.info("Sending CategoryAndDistrictItemsRequest to {}", proxyUrl);
         ItemList itemListResponse = (ItemList) trafficService
                 .sendEmptyRequest("/items/get/categoryanddistrict/" + category + "&" + district, ItemList.class);
         LOGGER.info("Received {}", itemListResponse);

@@ -21,5 +21,8 @@ public class TrafficGenerator {
     void sendRequest() {
         LOGGER.info("Creating request");
         itemsService.sendGetAllItemsRequest();
+        itemsService.sendGetDistrictItemsRequest("dupa");
+        itemsService.sendGetCategoryItemsRequest("dupa");
+        itemsService.sendGetCategoryAndDistrictItemsRequest("dupa","w dupie");
     }
 }
