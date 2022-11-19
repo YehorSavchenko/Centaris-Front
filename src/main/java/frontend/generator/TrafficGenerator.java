@@ -17,12 +17,12 @@ public class TrafficGenerator {
         this.itemsService = itemsService;
     }
 
-    @Scheduled(fixedRate = 1000)
-    void sendRequest() {
-        LOGGER.info("Creating request");
-        itemsService.sendGetAllItemsRequest();
-        itemsService.sendGetDistrictItemsRequest("dupa");
-        itemsService.sendGetCategoryItemsRequest("dupa");
-        itemsService.sendGetCategoryAndDistrictItemsRequest("dupa","w dupie");
-    }
+//    @Scheduled(fixedRate = 1000)
+//    void sendRequest() {
+//        LOGGER.info("Creating request");
+//        itemsService.sendGetAllItemsRequest();
+//        itemsService.sendGetDistrictItemsRequest("dupa");
+//        itemsService.sendGetCategoryItemsRequest("dupa");
+//        itemsService.sendGetCategoryAndDistrictItemsRequest("dupa","w dupie");
+//    }
 }

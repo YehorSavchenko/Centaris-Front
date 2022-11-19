@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ItemsService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ItemsService.class);
-    private TrafficService trafficService;
+    private final TrafficService trafficService;
 
     @Value("${connections.proxy}")
     private String proxyUrl;
@@ -18,11 +18,13 @@ public class ItemsService {
         this.trafficService = trafficService;
     }
 
-    public void sendGetAllItemsRequest() {
+    public ItemList sendGetAllItemsRequest() {
         LOGGER.info("Sending GetAllItemsRequest to {}", proxyUrl);
         ItemList itemListResponse = (ItemList) trafficService
                 .sendEmptyRequest("/items/get/all", ItemList.class);
         LOGGER.info("Received {}", itemListResponse);
+
+        return itemListResponse;
     }
 
     public void sendGetDistrictItemsRequest(String district) {
