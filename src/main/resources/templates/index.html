@@ -5,9 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-<div th:each="item : ${items}" id="items">
-    <strong th:text="${item.name}"></strong>
-    <p th:text="${item.category}" style="color: white"></p>
-</div>
+<p th:text="'Hello, ' + ${items} + '!'"></p>
 </body>
 </html>
