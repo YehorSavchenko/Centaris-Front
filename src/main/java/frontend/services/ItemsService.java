@@ -25,4 +25,25 @@ public class ItemsService {
         LOGGER.info("Received {}", itemListResponse);
     }
 
+    public void sendGetDistrictItemsRequest(String district) {
+        LOGGER.info("Sending request to {}", proxyUrl);
+        ItemList itemListResponse = (ItemList) trafficService
+                .sendEmptyRequest("/items/get/district/" + district, ItemList.class);
+        LOGGER.info("Received {}", itemListResponse);
+    }
+
+    public void sendGetCategoryItemsRequest(String category) {
+        LOGGER.info("Sending request to {}", proxyUrl);
+        ItemList itemListResponse = (ItemList) trafficService
+                .sendEmptyRequest("/items/get/category/" + category, ItemList.class);
+        LOGGER.info("Received {}", itemListResponse);
+    }
+
+    public void sendGetCategoryAndDistrictItemsRequest(String category, String district) {
+        LOGGER.info("Sending request to {}", proxyUrl);
+        ItemList itemListResponse = (ItemList) trafficService
+                .sendEmptyRequest("/items/get/categoryanddistrict/" + category + "&" + district, ItemList.class);
+        LOGGER.info("Received {}", itemListResponse);
+    }
+
 }
