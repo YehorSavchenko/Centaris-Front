@@ -14,9 +14,20 @@ public class TestController {
         this.itemsService = itemsService;
     }
 
-    @GetMapping("/getItemList")
+    @GetMapping("/index")
     public String getItemList(Model model){
-        model.addAttribute("items", itemsService.sendGetAllItemsRequest());
+//        model.addAttribute("items", itemsService.sendGetAllItemsRequest().getItems());
         return "index";
+    }
+
+    @GetMapping("/generic")
+    public String getItemInfo(){
+        return "generic";
+    }
+
+    @GetMapping("/elements")
+    //TODO Nie wiem jak to nazwac
+    public String getDupa(){
+        return "elements";
     }
 }
