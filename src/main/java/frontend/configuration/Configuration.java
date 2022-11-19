@@ -1,4 +1,4 @@
-package configuration;
+package frontend.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.reactive.function.client.WebClient;
