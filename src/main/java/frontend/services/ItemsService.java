@@ -1,5 +1,6 @@
 package frontend.services;
 
+import model.Item;
 import model.ItemList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,11 @@ public class ItemsService {
         LOGGER.info("Received {}", itemListResponse);
 
         return itemListResponse;
+    }
+
+    public Item getItemById(Long id) {
+        return (Item) trafficService
+                .sendEmptyRequest("/items/get/" + id.toString(), Item.class);
     }
 
     public void sendGetDistrictItemsRequest(String district) {
