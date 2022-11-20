@@ -2851,6 +2851,39 @@ body.is-touch .tiles article .content {
     vertical-align: middle;
 }
 
+#header .login {
+    border-bottom: 0;
+    color: inherit;
+    letter-spacing: 0.35em;
+    margin: 0 0 2.5em 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline;
+}
+
+#header .login > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    float: right;
+}
+
+#header .sing-up {
+    border-bottom: 0;
+    color: inherit;
+    letter-spacing: 0.35em;
+    margin: 0 0 2.5em 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline;
+}
+
+#header .sing-up > * {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+}
+
 #header .logo .symbol {
     margin-right: 0.65em;
 }
