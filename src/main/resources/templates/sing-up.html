@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       lang="en">
 <head>
-    <title>Centaris by HTML5 UP</title>
+    <title>Centaris</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
@@ -43,11 +43,10 @@
     <nav id="menu">
         <h2>Menu</h2>
         <ul>
-            <li><a href="index.html" th:href="index">Home</a></li>
-            <li><a href="generic.html" th:href="generic">Ipsum veroeros</a></li>
-            <li><a href="generic.html" th:href="generic">Tempus etiam</a></li>
-            <li><a href="generic.html" th:href="generic">Consequat dolor</a></li>
-            <li><a href="elements.html" th:href="elements">Elements</a></li>
+            <li><a th:href="index">Home</a></li>
+            <li><a th:href="index">My profile</a></li>
+            <li><a th:href="index">Favorite</a></li>
+            <li><a th:href="index">Inbox</a></li>
         </ul>
     </nav>
 
@@ -61,7 +60,7 @@
         <div class="inner">
             <section>
                 <h2>Sign Up</h2>
-                <form method="post" action="#">
+                <form method="get" action="">
                     <div class="fields">
                         <div class="field half">
                             <input type="text" name="name" id="name" placeholder="Name"/>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Generic - Phantom by HTML5 UP</title>
+    <title>Centaris</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
@@ -21,7 +21,7 @@
             <a href="index.html" th:href="index" class="logo">
                 <span class="symbol"><img src="../static/images/logo.svg" th:src="@{/images/logo.svg}"
                                           alt=""/></span><span
-                    class="title">Phantom</span>
+                    class="title">Centaris</span>
             </a>
 
             <a href="login.html" th:href="login" class="login">
@@ -45,25 +45,19 @@
     <nav id="menu">
         <h2>Menu</h2>
         <ul>
-            <li><a href="index.html" th:href="index">Home</a></li>
-            <li><a href="generic.html" th:href="generic">Ipsum veroeros</a></li>
-            <li><a href="generic.html" th:href="generic">Tempus etiam</a></li>
-            <li><a href="generic.html" th:href="generic">Consequat dolor</a></li>
-            <li><a href="elements.html" th:href="elements">Elements</a></li>
+            <li><a th:href="index">Home</a></li>
+            <li><a th:href="index">My profile</a></li>
+            <li><a th:href="index">Favorite</a></li>
+            <li><a th:href="index">Inbox</a></li>
         </ul>
     </nav>
 
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Generic Page</h1>
+            <h1 th:text="${item.name}"></h1>
             <span class="image main"><img src="../static/images/pic13.jpg" th:src="@{/images/pic13.jpg}" alt=""/></span>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis
-                dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-                Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia
-                malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien
-                risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit
-                tristique.</p>
+            <p th:text="${item.shortDesc}"></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
                 taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu
                 nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies
@@ -83,7 +77,7 @@
         <div class="inner">
             <section>
                 <h2>Get in touch</h2>
-                <form method="post" action="#">
+                <form method="get" action="">
                     <div class="fields">
                         <div class="field half">
                             <input type="text" name="name" id="name" placeholder="Name"/>
@@ -108,7 +102,6 @@
                     </li>
                     <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
                     </li>
-                    <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
                     <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
                     <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
                     <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>

@@ -52,11 +52,10 @@
     <nav id="menu">
         <h2>Menu</h2>
         <ul>
-            <li><a href="index.html" th:href="index">Home</a></li>
-            <li><a href="generic.html" th:href="generic">Ipsum veroeros</a></li>
-            <li><a href="generic.html" th:href="generic">Tempus etiam</a></li>
-            <li><a href="generic.html" th:href="generic">Consequat dolor</a></li>
-            <li><a href="elements.html" th:href="elements">Elements</a></li>
+            <li><a th:href="index">Home</a></li>
+            <li><a th:href="index">My profile</a></li>
+            <li><a th:href="index">Favorite</a></li>
+            <li><a th:href="index">Inbox</a></li>
         </ul>
     </nav>
 
@@ -64,54 +63,37 @@
     <div id="main">
         <div class="inner">
             <header>
-<!--                <h1>This is Centaris, a free, fully responsive site<br/>-->
-<!--                    template designed by-->
-<!--                <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus-->
-<!--                    arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam.-->
-<!--                    Lorem ipsum dolor sit amet nullam dolore.</p>-->
+                <h1>Find the item you need for your kid. For free!</h1>
             </header>
             <section class="tiles">
                 <article class="style1">
 									<span class="image">
-										<img th:src="${item.mainImage}" alt=""/>
+										<img th:src="${item1.mainImage}" alt="" width="360px" height="333px"/>
 									</span>
-                    <a href="generic.html" th:href="index">
-                        <button class="heart"></button>
-                        <h2 th:inline="text" th:text="${item.name}">
-                            Item Name</h2>
-                        <h3 th:inline="text" th:text="${item.category}" >Category</h3>
-                        <h3 th:inline="text" th:text="${item.district}" >Location</h3>
-                        <div class="content">
-                            <p>ShortDescription</p>
-                        </div>
+                    <a th:href="@{__${item1.id}__}">
+                        <h2 th:inline="text" th:text="${item1.name}">Item Name</h2>
+                        <h3 th:inline="text" th:text="${item1.category}" >Category</h3>
+                        <h3 th:inline="text" th:text="${item1.district}" >Location</h3>
                     </a>
                 </article>
                 <article class="style2">
 									<span class="image">
-										<img src="../static/images/pic02.jpg" th:src="@{/images/pic02.jpg}" alt=""/>
+										<img th:src="${item2.mainImage}" alt="" width="360px" height="333px"/>
 									</span>
-                    <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
-                        <h2>Item Name</h2>
-                        <h3>Category</h3>
-                        <h3>Location</h3>
-                        <div class="content">
-                            <p>ShortDescription</p>
-                        </div>
+                    <a th:href="@{__${item2.id}__}">
+                        <h2 th:inline="text" th:text="${item2.name}">Item Name</h2>
+                        <h3 th:inline="text" th:text="${item2.category}" >Category</h3>
+                        <h3 th:inline="text" th:text="${item2.district}" >Location</h3>
                     </a>
                 </article>
                 <article class="style3">
 									<span class="image">
-										<img src="../static/images/pic03.jpg" th:src="@{/images/pic03.jpg}" alt=""/>
+										<img th:src="${item3.mainImage}" alt="" width="360px" height="333px"/>
 									</span>
-                    <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
-                        <h2>Item Name</h2>
-                        <h3>Category</h3>
-                        <h3>Location</h3>
-                        <div class="content">
-                            <p>ShortDescription</p>
-                        </div>
+                    <a th:href="@{__${item3.id}__}">
+                        <h2 th:inline="text" th:text="${item3.name}">Item Name</h2>
+                        <h3 th:inline="text" th:text="${item3.category}" >Category</h3>
+                        <h3 th:inline="text" th:text="${item3.district}" >Location</h3>
                     </a>
                 </article>
                 <article class="style4">
@@ -119,7 +101,6 @@
 										<img src="../static/images/pic04.jpg" th:src="@{/images/pic04.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -133,7 +114,6 @@
 										<img src="../static/images/pic05.jpg" th:src="@{/images/pic05.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -147,7 +127,6 @@
 										<img src="../static/images/pic06.jpg" th:src="@{/images/pic06.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -161,7 +140,6 @@
 										<img src="../static/images/pic07.jpg" th:src="@{/images/pic07.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -175,7 +153,6 @@
 										<img src="../static/images/pic08.jpg" th:src="@{/images/pic08.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -189,7 +166,6 @@
 										<img src="../static/images/pic09.jpg" th:src="@{/images/pic09.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -203,7 +179,6 @@
 										<img src="../static/images/pic10.jpg" th:src="@{/images/pic10.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -217,7 +192,6 @@
 										<img src="../static/images/pic11.jpg" th:src="@{/images/pic11.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -231,7 +205,6 @@
 										<img src="../static/images/pic12.jpg" th:src="@{/images/pic12.jpg}" alt=""/>
 									</span>
                     <a href="generic.html" th:href="generic">
-                        <button class="heart"></button>
                         <h2>Item Name</h2>
                         <h3>Category</h3>
                         <h3>Location</h3>
@@ -249,7 +222,7 @@
         <div class="inner">
             <section>
                 <h2>Get in touch</h2>
-                <form method="post" action="#">
+                <form method="get" action="">
                     <div class="fields">
                         <div class="field half">
                             <input type="text" name="name" id="name" placeholder="Name"/>
@@ -274,7 +247,6 @@
                     </li>
                     <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
                     </li>
-                    <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
                     <li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
                     <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
                     <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>

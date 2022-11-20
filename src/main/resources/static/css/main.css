@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
-/*
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2711,29 +2705,6 @@ button:disabled,
     margin-bottom: 0;
 }
 
-.tiles article.style1 > .image:before {
-    background-color: #f2849e;
-}
-
-.tiles article.style2 > .image:before {
-    background-color: #7ecaf6;
-}
-
-.tiles article.style3 > .image:before {
-    background-color: #7bd0c1;
-}
-
-.tiles article.style4 > .image:before {
-    background-color: #c75b9b;
-}
-
-.tiles article.style5 > .image:before {
-    background-color: #ae85ca;
-}
-
-.tiles article.style6 > .image:before {
-    background-color: #8499e7;
-}
 
 body:not(.is-touch) .tiles article:hover > .image {
     -moz-transform: scale(1.1);
@@ -2996,7 +2967,7 @@ body.is-touch .tiles article .content {
     align-items: flex-end;
 }
 
-.search-box button{
+.search-box button {
     overflow: unset;
 }
 
@@ -3277,6 +3248,7 @@ body.is-menu-visible #menu .close {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
 /* Footer */
 
 #footer {
