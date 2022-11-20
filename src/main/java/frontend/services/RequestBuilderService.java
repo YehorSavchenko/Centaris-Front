@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
-public class TrafficService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TrafficService.class);
+public class RequestBuilderService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RequestBuilderService.class);
     private final WebClient webClient;
     @Value("${connections.proxy}")
     private String proxyUrl;
 
-    public TrafficService(WebClient webClient) {
+    public RequestBuilderService(WebClient webClient) {
         this.webClient = webClient;
     }
 
