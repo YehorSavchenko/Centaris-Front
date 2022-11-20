@@ -27,7 +27,17 @@ public class TestController {
 
     @GetMapping("/elements")
     //TODO Nie wiem jak to nazwac
-    public String getDupa(){
+    public String goToElements(){
         return "elements";
+    }
+
+    @GetMapping("/login")
+    public String goToLogin(){
+        return "login";
+    }
+
+    @GetMapping("/sing-up")
+    public String goToSignUp(){
+        return "sing-up";
     }
 }

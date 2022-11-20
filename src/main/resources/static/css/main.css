@@ -2691,6 +2691,10 @@ button:disabled,
     margin: 0;
 }
 
+.tiles article > a h3 {
+    margin: 0;
+}
+
 .tiles article > a .content {
     -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
     -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -2831,7 +2835,7 @@ body.is-touch .tiles article .content {
 /* Header */
 
 #header {
-    padding: 2.5em 0 0.1em 0;
+    padding: 3em 0 0.1em 0;
 }
 
 #header .logo {
@@ -2871,7 +2875,7 @@ body.is-touch .tiles article .content {
 #header .sing-up {
     border-bottom: 0;
     color: inherit;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.25em;
     margin: 0 0 2.5em 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -3225,6 +3229,10 @@ body.is-menu-visible #menu .close {
     padding: 0em 0 6em 0;
 }
 
+#main-login {
+    padding: 0em 0 0em 0;
+}
+
 @media screen and (max-width: 736px) {
 
     #main {
@@ -3233,6 +3241,11 @@ body.is-menu-visible #menu .close {
 
 }
 
+/*Login*/
+#body-login {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 /* Footer */
 
 #footer {

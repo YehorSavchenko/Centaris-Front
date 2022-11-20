@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <!--
-	Phantom by HTML5 UP
+	Centaris by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
 <head>
-    <title>Generic - Phantom by HTML5 UP</title>
+    <title>Centaris by HTML5 UP</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
@@ -14,7 +15,7 @@
         <link href="../static/css/noscript.css" th:href="@{/css/noscript.css}" rel="stylesheet"/>
     </noscript>
 </head>
-<body class="is-preload">
+<body class="is-preload" id="body-login">
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -26,14 +27,11 @@
             <a href="index.html" th:href="index" class="logo">
                 <span class="symbol"><img src="../static/images/logo.svg" th:src="@{/images/logo.svg}"
                                           alt=""/></span><span
-                    class="title">Phantom</span>
+                    class="title">Centaris</span>
             </a>
 
             <a href="login.html" th:href="login" class="login">
                 <span class="label">Login</span>
-            </a>
-            <a href="sing-up.html" th:href="sing-up" class="sing-up">
-                <span class="label">Sing Up</span>
             </a>
 
             <!-- Nav -->
@@ -59,49 +57,30 @@
     </nav>
 
     <!-- Main -->
-    <div id="main">
-        <div class="inner">
-            <h1>Generic Page</h1>
-            <span class="image main"><img src="../static/images/pic13.jpg" th:src="@{/images/pic13.jpg}" alt=""/></span>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis
-                dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-                Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia
-                malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien
-                risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit
-                tristique.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu
-                nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies
-                condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem
-                mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque
-                aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet
-                dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo
-                mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis
-                elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-        </div>
+    <div id="main-login">
+
     </div>
 
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
             <section>
-                <h2>Get in touch</h2>
+                <h2>Sign Up</h2>
                 <form method="post" action="#">
                     <div class="fields">
                         <div class="field half">
                             <input type="text" name="name" id="name" placeholder="Name"/>
                         </div>
                         <div class="field half">
-                            <input type="email" name="email" id="email" placeholder="Email"/>
+                            <input type="password" name="password" id="password" placeholder="Password"/>
                         </div>
                         <div class="field">
-                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                            <input type="email" name="email" id="email" placeholder="Email"/>
                         </div>
+
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="Send" class="primary"/></li>
+                        <li><input type="submit" value="Sing Up" class="primary"/></li>
                     </ul>
                 </form>
             </section>
@@ -121,8 +100,7 @@
                 </ul>
             </section>
             <ul class="copyright">
-                <li>&copy; Untitled. All rights reserved</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li></li>
             </ul>
         </div>
     </footer>
